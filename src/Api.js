@@ -12,8 +12,7 @@ export default class Api {
       }
     });
 
-    // const host = 'http://localhost:5555';
-    const host = 'https://daria-chizh.herokuapp.com/';
+    const host = process.env.NODE_ENV === 'production' ? 'https://daria-chizh.herokuapp.com/' : 'http://localhost:5555';
     let url = `${host}/?method=${apiMethod}`;
     if (id) {
       url += `&id=${id}`;
