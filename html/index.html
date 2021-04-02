@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+<div class="main-window">
+    <div class="content">
+        <button id="addTicket" class="add-ticket">Добавить тикет</button>
+    </div>
+
+    <div class="table-cart">
+        <table id="table" class="table"></table>
+    </div>
+</div>
+
+<div id="dialogModify" class="hidden dialog">
+    <form id="ticketForm">
+        <div class="dialogTitle">Добавить тикет</div>
+        <span>Краткое описание</span>
+        <div class="dialogContent">
+            <input type="text" id="ticketName" required />
+        </div>
+
+        <span>Подробное описание</span>
+        <div class="dialogContent">
+            <input type="text" id="ticketDescription" required />
+        </div>
+
+        <div class="dialogButtons">
+            <button class="closeDialog dialogButton">Отмена</button>
+            <button class="dialogButton" type="submit">ОК</button>
+        </div>
+    </form>
+</div>
+
+<div id="dialogDelete" class="hidden dialog">
+    <div class="dialogTitle">Удалить тикет</div>
+    <span>Вы уверены, что хотите удалить тикет? Это действие необратимо</span>
+    <form id="deleteForm">
+        <div class="dialogButtons">
+            <button class="closeDialog dialogButton">Отмена</button>
+            <button class="dialogButton" type="submit">Ок</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
